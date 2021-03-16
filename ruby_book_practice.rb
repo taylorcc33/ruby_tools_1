@@ -1,13 +1,15 @@
-puts "Input an integer"
+#!/usr/bin/env ruby
+
+puts "Input an integer between 5 and 10:"
 
 user_number = gets.to_i
 
-def even_odd (num)
-  if num % 2 === 0
-    puts "Your number is even"
-  elsif num % 2 === 1
-    puts "Your number is odd"
+def five_ten (num)
+  if num >= 5 && num <= 10
+    puts "Number is within range."
+  else
+    puts "Number is outside of range."
   end
 end
 
-even_odd(user_number)
+five_ten(user_number)

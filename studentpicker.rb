@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-students = ["Taylor", "Ian", "Dani", "Andrew", "Sarah", "Tony"]
+students = ['Taylor', 'Ian', 'Dani', 'Andrew', 'Sarah', 'Tony']
 
 new_arr1 = []
 new_arr2 = []

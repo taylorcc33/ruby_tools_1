@@ -11,7 +11,7 @@ def main_menu
   user_input = gets.chomp.to_i
 
   if user_input === 1
-    new_game
+    start_game
   elsif user_input === 2
     exit
   else
@@ -20,8 +20,9 @@ def main_menu
   end
 end
 
-def new_game
+def start_game
   @board.generate_board
+
 end
 
 main_menu

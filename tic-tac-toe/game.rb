@@ -22,9 +22,27 @@ def main_menu
   end
 end
 
+def check_win_state
+
+end
+
+def position_taken(board_index)
+  if (board_index == " ")
+    return false
+  else
+    return true
+  end
+end
+
+
+def game_loop
+
+end
+
 def start_game
   @board.show_board
   @player.make_move
+
  
   @board.update_board(@player.player_move)
   @board.show_board

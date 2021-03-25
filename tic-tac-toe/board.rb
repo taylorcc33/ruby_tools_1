@@ -18,6 +18,7 @@ class Board
     @board[player_move] = "x"
   end
 
+  
 # Created the method below for fun to generate random x's on the gameboard
 #
 # def random_xs(board)

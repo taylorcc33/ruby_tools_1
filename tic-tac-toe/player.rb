@@ -10,7 +10,11 @@ class Player
     puts 'Choose a square (1-9) to place "x":'
     puts ""
     player_input = gets.chomp.to_i
-    @player_move = player_input - 1
-    
+    if (player_input -1).between?(0,8)
+      @player_move = player_input - 1
+    else
+      puts "Invalid entry."
+      make_move
+    end
   end
 end

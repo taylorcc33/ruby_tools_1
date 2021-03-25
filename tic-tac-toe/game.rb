@@ -42,8 +42,6 @@ end
 def start_game
   @board.show_board
   @player.make_move
-
- 
   @board.update_board(@player.player_move)
   @board.show_board
 end

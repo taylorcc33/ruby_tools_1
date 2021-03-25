@@ -1,6 +1,8 @@
 require_relative "board"
+require_relative "player"
 
 @board = Board.new
+@player = Player.new
 
 def main_menu
   puts "~~~~~Welcom to Tic Tac Toe~~~~~"
@@ -21,8 +23,11 @@ def main_menu
 end
 
 def start_game
-  @board.generate_board
-
+  @board.show_board
+  @player.make_move
+ 
+  @board.update_board(@player.player_move)
+  @board.show_board
 end
 
 main_menu

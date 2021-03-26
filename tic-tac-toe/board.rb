@@ -18,7 +18,13 @@ class Board
     @board[player_move] = "x"
   end
 
-  
+  def position_free?(player_move)
+    if (@board[player_move] == " ")
+      return true
+    else
+      return false
+    end
+  end
 # Created the method below for fun to generate random x's on the gameboard
 #
 # def random_xs(board)

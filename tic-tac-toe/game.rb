@@ -26,24 +26,25 @@ def check_win_state
 
 end
 
-def position_taken(board_index)
-  if (board_index == " ")
-    return false
-  else
-    return true
-  end
+def position_taken?(player_move)
+  @board.position_free?(player_move)
 end
 
-
-def game_loop
-
+def make_move
+  @player.make_move
+  if position_taken?(@player.player_move)
+    @board.update_board(@player.player_move)
+    @board.show_board
+  else
+    @player.make_move
+  end
 end
 
 def start_game
   @board.show_board
-  @player.make_move
-  @board.update_board(@player.player_move)
-  @board.show_board
+  make_move
+  
+  
 end
 
 main_menu

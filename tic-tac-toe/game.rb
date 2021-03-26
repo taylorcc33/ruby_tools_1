@@ -36,12 +36,14 @@ def make_move
     @board.update_board(@player.player_move)
     @board.show_board
   else
+    puts "This square is occupied, choose another."
     @player.make_move
   end
 end
 
 def start_game
   @board.show_board
+  make_move
   make_move
   
   

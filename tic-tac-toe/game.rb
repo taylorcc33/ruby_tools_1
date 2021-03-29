@@ -1,7 +1,6 @@
 require_relative "board"
 require_relative "player"
 
-@board = Board.new
 @player = Player.new
 
 def main_menu
@@ -42,6 +41,7 @@ def make_move
 end
 
 def run_game
+  @board = Board.new
   @board.show_board
   make_move
   make_move

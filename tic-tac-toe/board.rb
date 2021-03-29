@@ -25,6 +25,10 @@ class Board
       return false
     end
   end
+
+  def check_win
+    # win_condition_1 = 
+  end
 # Created the method below for fun to generate random x's on the gameboard
 #
 # def random_xs(board)

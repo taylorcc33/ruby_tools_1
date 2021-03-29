@@ -13,7 +13,7 @@ def main_menu
   user_input = gets.chomp.to_i
 
   if user_input === 1
-    start_game
+    run_game
   elsif user_input === 2
     exit
   else
@@ -41,7 +41,7 @@ def make_move
   end
 end
 
-def start_game
+def run_game
   @board.show_board
   make_move
   make_move

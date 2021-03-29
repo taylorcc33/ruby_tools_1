@@ -30,7 +30,7 @@ class Board
     WIN_COMBINATIONS = [
       [0,1,2],
       [3,4,5],
-      [6,7,8]
+      [6,7,8],
       [0,3,6],
       [1,4,7],
       [2,5,8],
@@ -38,6 +38,7 @@ class Board
       [6,4,2]
     ]
   end
+  
 # Created the method below for fun to generate random x's on the gameboard
 #
 # def random_xs(board)

@@ -44,6 +44,11 @@ def run_game
   @board = Board.new
   @board.show_board
   make_move
+  if @board.won?
+    puts "game over"
+  else
+    "keep going"
+  end
   make_move
   
   

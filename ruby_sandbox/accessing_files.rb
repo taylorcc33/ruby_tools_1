@@ -14,3 +14,7 @@ File.open('file1.txt', 'r') do |file|
 end
 
 # second argument is the 'mode': r, w, a, r+, w+, a+
+# w: starting a new file
+# r+: reading/writing to an existing file
+# r: read-only access to file
+# a: appending data to the end of a file

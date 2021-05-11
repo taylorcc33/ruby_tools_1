@@ -1,7 +1,7 @@
 @contact_list = [
   {
     name: "Taylor",
-    address: "Holladay" 
+    address: "Holladay"
   },
   {
     name: "James",
@@ -10,10 +10,13 @@
 ]
 
 def main_menu
-  puts "Choose an option:
-    1. View all contacts 
-    2. Add a contact 
-    3. Exit
+  puts "Welcome to your Contact List!
+    Please choose an option below:
+
+    1. View all contacts
+    2. Add a contact
+    3. Exit the program
+
   "
 
   user_input = gets.chomp.to_i
@@ -23,16 +26,15 @@ def main_menu
   elsif user_input == 2
     add_contact
   elsif user_input == 3
-    exit
+    exit 
   else
-    puts "Ivalid choice, choose again"
+    puts "Invalid choice, please choose again."
     main_menu
   end
-
 end
 
 def view_contacts
-  puts "Contact List"
+  puts "All Contacts"
   puts ""
 
   @contact_list.each do |i|
@@ -45,30 +47,34 @@ def view_contacts
 end
 
 def add_contact
-  new_contact = 
+  new_contact =
     {
       name: "",
       address: ""
     }
 
-  puts "Add Contact
-    Enter Contact Name: 
+  puts "Add a Contact
+    Enter Contact Name:
 
   "
+
   name_input = gets.chomp
   new_contact[:name] = name_input
+
   puts ""
-  puts "Enter Contact Address:
-  
+  puts "Enter Contact Address: 
+
   "
+
   address_input = gets.chomp
   new_contact[:address] = address_input
+  
   puts ""
 
   @contact_list.push(new_contact)
 
-  puts "New Contact added!
-
+  puts "New Contact Added!
+  
     #{new_contact[:name]}
     #{new_contact[:address]}
   "
@@ -78,3 +84,6 @@ def add_contact
 end
 
 main_menu
+
+
+

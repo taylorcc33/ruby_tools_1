@@ -74,8 +74,6 @@ def add_contact
   "
   puts ""
 
-
-
   main_menu
 end
 

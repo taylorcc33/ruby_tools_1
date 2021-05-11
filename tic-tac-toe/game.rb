@@ -4,7 +4,7 @@ require_relative "player"
 @player = Player.new
 
 def main_menu
-  puts "~~~~~Welcom to Tic Tac Toe~~~~~"
+  puts "~~~~~Welcome to Tic Tac Toe~~~~~"
   puts "Choose an option:"
   puts "1. New Game"
   puts "2. Quit"

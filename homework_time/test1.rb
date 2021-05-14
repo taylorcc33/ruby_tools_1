@@ -44,11 +44,46 @@ res2 = {
     { user_id: 2, rating: 4 },
   ],
 }
+res3 = {
+  id: 3,
+  name: "Red Iguana",
+  location: {
+    city: "SLC",
+    state: "UT",
+  },
+  delivery: false,
+  days_open: "mon,tues,wed,thur,fri,sat",
+  likes: 500,
+  dishes: [
+    { name: "Tacos", price: 8.25, ingredients: ["tortilla", "carne"] },
+    { name: "Quesidalla", price: 9.25, ingredients: ["tortilla", "cheese"] },
+    { name: "Lemonade", price: 9.25, ingredients: ["lemons", "sugar"] },
+    { name: "Burger", price: 9.25, ingredients: ["Buns", "Beef"] },
+  ],
+  reviews: [
+    { user_id: 1, rating: 2 },
+    { user_id: 2, rating: 4 },
+  ],
+}
 
-def show_user_name(user, res)
-  if user[:id] == res
-    puts "#{user[:name]}"
+# Create a function that prints out res1 name along with dishes and ingredients
+
+def dishes_ingredients(restaurant)
+  puts restaurant[:name]
+  # puts restaurant[:dishes]
+
+  restaurant[:dishes].each do |dish|
+    puts dish[:name]
+    puts dish[:ingredients]
   end
+  
 end
 
-show_user_name(user1, res2)
+dishes_ingredients(res1)
+
+
+
+
+
+
+

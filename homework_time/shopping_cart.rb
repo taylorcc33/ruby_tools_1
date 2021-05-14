@@ -1,3 +1,4 @@
+###### Data Sets ######
 @inventory = [
   { id: 1, name: "Surfboard", price: 200 },
   { id: 2, name: "Macbook Pro", price: 2000 },
@@ -6,6 +7,7 @@
 
 @shopping_cart = []
 
+###### Main Menu/App function ######
 def main_menu
   puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
   puts "|       Lame-azon.com      |"
@@ -17,7 +19,6 @@ def main_menu
           2. View Cart
           3. Exit
   "
-
   user_input = gets.chomp.to_i
 
   if user_input == 1
@@ -29,6 +30,7 @@ def main_menu
   end
 end
 
+##### Other functions ######
 def shopping_menu
   puts ""
   puts "Shopping Menu"
@@ -46,6 +48,8 @@ def shopping_menu
     item_selection_menu
   elsif user_input == 2
     cart_menu
+  elsif user_input == 3
+    main_menu
   end
 
 end
@@ -55,7 +59,7 @@ def item_selection_menu
   puts "Select an item below to purchase:"
   puts ""
 
-
+  # Displaying all products in the inventory
   @inventory.each_with_index do |v,i|
     puts "#{i + 1}. #{v[:name]} - $#{v[:price]}"
   end
@@ -66,6 +70,7 @@ def item_selection_menu
   puts ""
   user_input_number = gets.chomp.to_i
 
+  # Checks user input choice with each product in inventory. If there's a match, it adds that product to the shopping cart
   @inventory.each_with_index do |v,i|
     if user_input_choice == (i + 1)
       user_input_number.times do 
@@ -101,7 +106,6 @@ def cart_menu
 
   user_input_remove == "y" ? remove_item_from_cart : return_to_main_menu(:cart_menu)
  
-  
 end
 
 def remove_item_from_cart

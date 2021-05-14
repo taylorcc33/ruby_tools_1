@@ -9,13 +9,14 @@
 
 ###### Main Menu/App function ######
 def main_menu
-  puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-  puts "|       Lame-azon.com      |"
-  puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  puts ""
+  puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  puts "|       Lame-azon.com 📦 🤬      |"
+  puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
-  puts "Choose an option below:
+  puts "Choose an option below 👇:
           
-          1. Go Shopping
+          1. Go Shopping 
           2. View Cart
           3. Exit
   "
@@ -35,7 +36,7 @@ def shopping_menu
   puts ""
   puts "Shopping Menu"
   puts "------------------------"
-  puts "Choose from below:
+  puts "Choose from below 👇:
   
           1. View available products
           2. View cart
